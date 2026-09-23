@@ -1,0 +1,165 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  background: #050505;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 140px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links li:hover a {
+  color: #f5c542;
+}
+
+.book-btn {
+  padding: 12px 25px;
+  background: #f5c542;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: #050505;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+}
+
+.mobile-icons {
+  display: none;
+}
+
+.account-icon {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.account-icon:hover {
+  color: #f5c542;
+}
+
+.mobile-login,
+.mobile-register {
+  display: none;
+}
+
+.mobile-book {
+  display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 20px;
+
+    background: #050505;
+    border: 1px solid #f5c542;
+
+    z-index: 1001;
+  }
+
+  .mobile-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    position: relative;
+    z-index: 1002;
+  }
+
+  .account-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar > .book-btn {
+    display: none;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .mobile-login,
+  .mobile-register {
+    display: block;
+  }
+
+  .mobile-login a,
+  .mobile-register a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .mobile-login:hover a,
+  .mobile-register:hover a {
+    color: #f5c542;
+  }
+
+  .mobile-book {
+    display: block;
+  }
+
+  .mobile-book a {
+    color: #f5c542;
+    text-decoration: none;
+  }
+}

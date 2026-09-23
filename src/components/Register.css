@@ -1,0 +1,102 @@
+.register-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #0b0b0b;
+}
+
+.register-box {
+  width: 100%;
+  max-width: 430px;
+  padding: 45px;
+  background: #151515;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.register-box h1 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.register-box > p {
+  margin-bottom: 30px;
+  color: #aaa;
+}
+
+.register-field {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.register-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.register-field input {
+  width: 100%;
+  padding: 13px;
+  box-sizing: border-box;
+  background: #0b0b0b;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #ffffff;
+  outline: none;
+}
+
+.register-field input:focus {
+  border-color: #d4af37;
+}
+
+.register-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #d4af37;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background: #e5c04b;
+}
+
+.login-text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.login-text a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+.success-message {
+  color: #4caf50;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.error-message {
+  color: #ff5c5c;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 14px;
+}

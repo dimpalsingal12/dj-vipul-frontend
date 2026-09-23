@@ -1,0 +1,360 @@
+
+.admin-services {
+  min-height: 100vh;
+  display: flex;
+  background: #0b0b0b;
+  color: white;
+}
+
+/* SIDEBAR */
+
+.services-sidebar {
+  width: 230px;
+  min-height: 100vh;
+  background: #111;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #2a2a2a;
+}
+
+.services-sidebar h2 {
+  margin: 0;
+  color: #d4af37;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.services-sidebar small {
+  color: #888;
+}
+
+.services-sidebar nav {
+  margin-top: 40px;
+}
+
+.services-sidebar nav a {
+  display: block;
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  color: #aaa;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.services-sidebar nav a:hover,
+.services-sidebar nav a.active {
+  background: #1d1d1d;
+  color: #d4af37;
+}
+
+.services-logout {
+  margin-top: 40px;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #444;
+  cursor: pointer;
+}
+
+.services-logout:hover {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+/* MAIN */
+
+.services-content {
+  flex: 1;
+  padding: 40px;
+  background: #0b0b0b;
+  box-sizing: border-box;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-header small {
+  color: #777;
+  letter-spacing: 1px;
+}
+
+.services-header h1 {
+  margin: 5px 0 0;
+  color: white;
+  font-size: 32px;
+}
+
+.services-header span {
+  color: #aaa;
+}
+
+/* SERVICES */
+
+.services-section {
+  margin-top: 40px;
+  padding: 30px;
+  background: #151515;
+  border: 1px solid #292929;
+}
+
+.services-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #292929;
+}
+
+.services-title small {
+  color: #d4af37;
+  letter-spacing: 1px;
+}
+
+.services-title h2 {
+  margin: 5px 0 0;
+  color: white;
+}
+
+/* ADD BUTTON */
+
+.add-service-btn {
+  padding: 10px 18px;
+  background: #d4af37;
+  color: #111;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-service-btn:hover {
+  background: #e2c45a;
+}
+
+/* FORM */
+
+.service-form {
+  margin-top: 25px;
+  padding: 20px;
+  background: #101010;
+  border: 1px solid #292929;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-form input,
+.service-form textarea {
+  padding: 12px;
+  background: #1b1b1b;
+  color: white;
+  border: 1px solid #444;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.service-form input:focus,
+.service-form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.service-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.service-form button {
+  width: fit-content;
+  padding: 10px 20px;
+  background: #d4af37;
+  color: #111;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* SERVICE LIST */
+
+.services-list {
+  margin-top: 25px;
+}
+
+.admin-service-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.admin-service-card h3 {
+  margin: 0 0 8px;
+  color: #d4af37;
+  font-size: 18px;
+}
+
+.admin-service-card p {
+  margin: 0 0 8px;
+  color: #bbb;
+  max-width: 700px;
+}
+
+.admin-service-card span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ACTION BUTTONS */
+
+.service-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-service {
+  padding: 9px 15px;
+  background: #d4af37;
+  color: #111;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit-service:hover {
+  background: #e2c45a;
+}
+
+.delete-service {
+  padding: 9px 15px;
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+
+.delete-service:hover {
+  color: #d4af37;
+  border-color: #d4af37;
+}
+
+/* NO SERVICES */
+
+.no-services {
+  padding: 50px 20px;
+  text-align: center;
+  color: #777;
+}
+
+.no-services p {
+  color: #d4af37;
+  font-size: 18px;
+}
+
+/* DELETE POPUP */
+
+.delete-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.delete-box {
+  width: 380px;
+  padding: 30px;
+  background: #151515;
+  border: 1px solid #d4af37;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.delete-box h2 {
+  margin: 0 0 12px;
+  color: #d4af37;
+}
+
+.delete-box p {
+  margin-bottom: 25px;
+  color: #bbb;
+}
+
+.delete-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cancel-delete {
+  padding: 10px 20px;
+  background: transparent;
+  color: #ccc;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+
+.cancel-delete:hover {
+  border-color: #aaa;
+}
+
+.confirm-delete {
+  padding: 10px 20px;
+  background: #d4af37;
+  color: #111;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.confirm-delete:hover {
+  background: #e2c45a;
+}
+
+
+.service-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.move-service,
+.toggle-service,
+.edit-service {
+  padding: 9px 12px;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+
+.move-service {
+  background: #1b1b1b;
+  color: #d4af37;
+  font-size: 18px;
+}
+
+.move-service:hover:not(:disabled) {
+  border-color: #d4af37;
+}
+
+.move-service:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.toggle-service {
+  background: transparent;
+  color: #aaa;
+}
+
+.toggle-service:hover {
+  color: #d4af37;
+  border-color: #d4af37;
+}

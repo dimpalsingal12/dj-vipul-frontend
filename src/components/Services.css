@@ -1,0 +1,115 @@
+.services {
+  padding: 100px 8%;
+  background: #0c0303;
+  color: white;
+  text-align: center;
+}
+
+.services .section-label {
+  color: #c9a227;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.services h2 {
+  font-size: 40px;
+  margin: 12px 0 18px;
+  letter-spacing: 1px;
+}
+
+.services-intro {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+
+/* Events */
+
+.event-services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: 60px auto 0;
+}
+
+.event-services div {
+  padding: 35px 30px;
+  background: #160909;
+  border: 1px solid #2b1b1b;
+  transition: 0.3s ease;
+}
+
+.event-services div:hover {
+  border-color: #c9a227;
+  transform: translateY(-4px);
+}
+
+.event-services h3 {
+  color: #c9a227;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.event-services p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+
+/* Music */
+
+.music-section {
+  max-width: 1000px;
+  margin: 100px auto 0;
+}
+
+.music-section h2 {
+  margin-bottom: 30px;
+}
+
+.music-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.music-list span {
+  padding: 12px 20px;
+  border: 1px solid #3a2525;
+  color: #ccc;
+  transition: 0.3s ease;
+}
+
+.music-list span:hover {
+  border-color: #c9a227;
+  color: #c9a227;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .services {
+    padding: 70px 25px;
+  }
+
+  .services h2 {
+    font-size: 32px;
+  }
+
+  .event-services {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+
+  .music-section {
+    margin-top: 75px;
+  }
+
+}

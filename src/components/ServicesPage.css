@@ -1,0 +1,595 @@
+.services-page {
+  background: #080808;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.services-hero {
+  min-height: 590px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080808 10%,
+      rgba(8, 8, 8, 0.72),
+      rgba(8, 8, 8, 0.12)
+    ),
+    url("../assets/gallery/dj1.jpeg") center/cover;
+}
+
+.services-hero-content {
+  max-width: 720px;
+}
+
+.services-hero-content > span,
+.experience-heading > span,
+.services-heading > span,
+.genres-heading > span,
+.services-cta > span {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.services-hero h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin: 22px 0;
+}
+
+.services-hero h1 strong,
+em {
+  color: #d4af37;
+  font-style: normal;
+}
+
+.services-hero p {
+  max-width: 530px;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.services-hero-btn,
+.services-cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #d4af37;
+  color: #080808;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.services-hero-btn:hover,
+.services-cta-btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+  padding: 95px 7% 100px;
+  background: #101010;
+}
+
+.services-heading {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-heading h2 {
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin: 15px 0 22px;
+}
+
+.services-heading p {
+  color: #999;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.services-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  position: relative;
+  min-height: 210px;
+  padding: 32px;
+  overflow: hidden;
+  border: 1px solid #292929;
+  background: #080808;
+  transition: 0.35s ease;
+}
+
+.service-card:hover,
+.service-card:active {
+  border-color: #d4af37;
+  transform: translateY(-4px);
+}
+
+.service-card-glow {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -80px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.07);
+  filter: blur(20px);
+  transition: 0.4s;
+}
+
+.service-card:hover .service-card-glow,
+.service-card:active .service-card-glow {
+  background: rgba(212, 175, 55, 0.17);
+}
+
+.service-card h3 {
+  position: relative;
+  font-size: 23px;
+  margin: 30px 0 12px;
+}
+
+.service-card p {
+  position: relative;
+  color: #999;
+  line-height: 1.65;
+  max-width: 500px;
+  font-size: 13px;
+}
+
+.service-arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  color: #d4af37;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.service-card:hover .service-arrow,
+.service-card:active .service-arrow {
+  transform: translateX(6px);
+}
+
+.no-services {
+  text-align: center;
+  color: #999;
+  grid-column: 1 / -1;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-section {
+  max-width: 1250px;
+  margin: auto;
+  padding: 100px 7% 90px;
+}
+
+.experience-heading {
+  text-align: center;
+}
+
+.experience-heading h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin: 15px 0 50px;
+}
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.experience-card {
+  min-height: 250px;
+  padding: 30px;
+  border: 1px solid #272727;
+  background: #0d0d0d;
+  transition: 0.35s ease;
+}
+
+.experience-card:hover,
+.experience-card:active {
+  border-color: #d4af37;
+  background: #11100c;
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  color: #d4af37;
+  font-size: 25px;
+  margin-bottom: 55px;
+}
+
+.experience-card h3 {
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.experience-card p {
+  color: #999;
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.genres-section {
+  max-width: 1250px;
+  margin: auto;
+
+  /* Reduced bottom space */
+  padding: 85px 7% 0;
+
+  height: auto;
+  min-height: 0;
+}
+
+.genres-heading {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.genres-heading h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin: 15px 0 20px;
+}
+
+.genres-heading p {
+  color: #999;
+  max-width: 650px;
+  line-height: 1.7;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.genres {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.genre-card {
+  padding: 24px;
+  min-height: 105px;
+  border-left: 2px solid #292929;
+  background: #0d0d0d;
+  transition: 0.3s;
+}
+
+.genre-card:hover,
+.genre-card:active {
+  border-left-color: #d4af37;
+  background: #111;
+}
+
+.genre-card span {
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.genre-card p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.genre-wide {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.services-cta {
+  position: relative;
+  text-align: center;
+
+  /* Directly follows music */
+  margin: 0;
+  padding: 35px 25px 100px;
+
+  height: auto;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+.cta-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.045);
+  filter: blur(70px);
+}
+
+.services-cta > * {
+  position: relative;
+}
+
+.services-cta h2 {
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin: 18px 0 22px;
+}
+
+.services-cta p {
+  max-width: 540px;
+  margin: 0 auto 30px;
+  color: #999;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .services-hero {
+    min-height: 540px;
+    padding: 65px 22px;
+
+    background-position: 62% center;
+  }
+
+  .services-hero-content > span {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .services-hero h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+    margin: 18px 0;
+  }
+
+  .services-hero p {
+    font-size: 12px;
+    max-width: 340px;
+    margin-bottom: 25px;
+  }
+
+  .services-hero-btn {
+    padding: 12px 22px;
+    font-size: 10px;
+  }
+
+
+  /* =========================
+     SERVICES
+  ========================= */
+
+  .services-section {
+    padding: 65px 16px 65px;
+  }
+
+  .services-heading h2 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .services-heading p {
+    max-width: 340px;
+    font-size: 11px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .service-card {
+    min-height: 145px;
+    padding: 20px 22px;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+    margin: 5px 0 8px;
+    padding-right: 25px;
+  }
+
+  .service-card p {
+    font-size: 10px;
+    line-height: 1.55;
+    max-width: 90%;
+  }
+
+  .service-arrow {
+    right: 17px;
+    bottom: 15px;
+    font-size: 18px;
+  }
+
+
+  /* =========================
+     EXPERIENCE
+  ========================= */
+
+  .experience-section {
+    padding: 65px 16px 60px;
+  }
+
+  .experience-heading h2 {
+    font-size: 37px;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+  }
+
+  .experience-cards {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .experience-card {
+    min-height: 145px;
+    padding: 20px 22px;
+
+    /* Keep mobile touch interaction */
+    touch-action: manipulation;
+  }
+
+  .experience-card:hover,
+  .experience-card:active {
+    border-color: #d4af37;
+    background: #11100c;
+    transform: translateY(-5px);
+  }
+
+  .card-icon {
+    font-size: 20px;
+    margin-bottom: 22px;
+  }
+
+  .experience-card h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+
+  .experience-card p {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+
+  /* =========================
+     MUSIC
+  ========================= */
+
+  .genres-section {
+    padding: 60px 16px 0;
+
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .genres-heading h2 {
+    font-size: 37px;
+    letter-spacing: -1px;
+  }
+
+  .genres-heading p {
+    max-width: 340px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .genres {
+    margin-top: 32px;
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .genre-card {
+    min-height: 82px;
+    padding: 18px;
+  }
+
+  .genre-card span {
+    font-size: 9px;
+  }
+
+  .genre-card p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .genre-wide {
+    grid-column: auto;
+  }
+
+
+  /* =========================
+     CTA
+  ========================= */
+
+  .services-cta {
+    padding: 20px 20px 75px;
+
+    margin: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .services-cta > span {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .services-cta h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+    margin: 15px 0 18px;
+  }
+
+  .services-cta p {
+    max-width: 330px;
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .services-cta-btn {
+    padding: 12px 22px;
+    font-size: 10px;
+  }
+
+}

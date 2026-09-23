@@ -1,0 +1,135 @@
+.footer {
+  background-color: #0b0b0b;
+  color: white;
+  text-align: center;
+  padding: 80px 20px 30px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Main Heading */
+
+.footer h2 {
+  font-size: 34px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.footer h3 {
+  font-size: 38px;
+  color: #9ab1b3;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.footer p {
+  font-size: 16px;
+  color: #bdbdbd;
+  margin-bottom: 35px;
+}
+
+/* Buttons */
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 55px;
+}
+
+.book-btn,
+.contact-btn {
+  padding: 13px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Book Now */
+
+.book-btn {
+  background-color: #d4af37;
+  color: #0b0b0b;
+  border: 2px solid #d4af37;
+}
+
+.book-btn:hover {
+  background-color: transparent;
+  color: #d4af37;
+}
+
+/* Contact Us */
+
+.contact-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #d4af37;
+}
+
+.contact-btn:hover {
+  background-color: #d4af37;
+  color: #0b0b0b;
+}
+
+/* Brand */
+
+.footer-brand {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+.footer-brand span {
+  color: #d4af37;
+  margin: 0 6px;
+}
+
+/* Copyright */
+
+.footer-bottom {
+  border-top: 1px solid #292929;
+  padding-top: 22px;
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 60px 20px 25px;
+  }
+
+  .footer h2,
+  .footer h3 {
+    font-size: 28px;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-btn,
+  .contact-btn {
+    width: 180px;
+  }
+
+  .footer-brand {
+    font-size: 12px;
+  }
+}
+
+.footer-buttons a {
+  text-decoration: none;
+  display: inline-block;
+}
+

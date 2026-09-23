@@ -1,0 +1,141 @@
+
+.booking {
+  padding: 90px 8%;
+  background: #0c0303;
+  color: white;
+  text-align: center;
+}
+
+.booking .section-label {
+  color: #c9a227;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.booking h2 {
+  font-size: 40px;
+  margin: 12px 0 40px;
+}
+
+.booking-form {
+  max-width: 750px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 14px;
+  background: #160909;
+  color: white;
+  border: 1px solid #332020;
+}
+
+.booking-form textarea {
+  grid-column: 1 / -1;
+  min-height: 130px;
+  resize: vertical;
+}
+
+.booking-form button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background: #c9a227;
+  color: #0c0303;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .booking {
+    padding: 70px 25px;
+  }
+
+  .booking h2 {
+    font-size: 32px;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form textarea,
+  .booking-form button {
+    grid-column: auto;
+  }
+}
+
+/* =========================
+   BOOKING POPUP ONLY
+========================= */
+
+.booking-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.booking-popup {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px 25px;
+  background: #160909;
+  border: 1px solid #c9a227;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.popup-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  border: 2px solid #c9a227;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9a227;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.booking-popup h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.booking-popup p {
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.booking-popup button {
+  padding: 12px 35px;
+  background: #c9a227;
+  color: #0c0303;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.booking-popup button:hover {
+  background: #e0bd45;
+}
+
+.booking-popup .popup-note {
+  color: #c9a227;
+  font-size: 14px;
+  font-weight: 600;
+}
