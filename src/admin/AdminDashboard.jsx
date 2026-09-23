@@ -30,8 +30,12 @@ function AdminDashboard() {
   };
 
   useEffect(() => {
+  const adminToken = localStorage.getItem("adminToken");
+
+  if (adminToken) {
     fetchBookings();
-  }, []);
+  }
+}, []);
 
   // ADMIN LOGOUT
   const handleLogout = () => {

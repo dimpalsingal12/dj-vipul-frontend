@@ -68,6 +68,17 @@ function Home() {
   );
 }
 
+function ProtectedAdminRoute({ children }) {
+  const adminToken = localStorage.getItem("adminToken");
+
+  if (!adminToken) {
+    window.location.href = "/admin-login";
+    return null;
+  }
+
+  return children;
+}
+
 function App() {
   const location = useLocation();
 
@@ -99,9 +110,9 @@ function App() {
         />
 
         <Route
-  path="/reset-password/:token"
-  element={<ResetPassword />}
-/>
+          path="/reset-password/:token"
+          element={<ResetPassword />}
+        />
 
         <Route path="/register" element={<Register />} />
 
@@ -114,7 +125,11 @@ function App() {
 
         <Route
           path="/admin"
-          element={<AdminDashboard />}
+          element={
+            <ProtectedAdminRoute>
+              <AdminDashboard />
+            </ProtectedAdminRoute>
+          }
         />
 
         <Route
