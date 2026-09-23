@@ -118,13 +118,14 @@ function BookingForm() {
         </select>
 
         <input
-          type="date"
-          name="eventDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formData.eventDate}
-          onChange={handleChange}
-          required
-        />
+  type="date"
+  name="eventDate"
+  min={new Date().toISOString().split("T")[0]}
+  value={formData.eventDate}
+  onChange={handleChange}
+  onClick={(e) => e.currentTarget.showPicker()}
+  required
+/>
 
         <input
           type="text"

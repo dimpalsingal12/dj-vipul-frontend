@@ -139,3 +139,9 @@
   font-size: 14px;
   font-weight: 600;
 }
+
+/* DATE INPUT */
+.booking-form input[type="date"] {
+  cursor: pointer;
+  color-scheme: dark;
+}
