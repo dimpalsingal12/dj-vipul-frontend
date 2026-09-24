@@ -56,7 +56,7 @@ function Register() {
 
       if (response.ok) {
         setMessage(
-          "Registration successful! Please check your email inbox and click on the 'Verify Email' button to activate your account. Also check your Spam folder."
+          "Your account has been created successfully. Check your email and click “Verify Email” to activate your account. If you don't see the email in your inbox, check your Spam folder."
         );
 
         setFormData({
@@ -81,12 +81,6 @@ function Register() {
 
         <h1>Create Account</h1>
         <p>Create your account to manage your bookings</p>
-
-        {message && (
-          <p className="success-message">
-            ✓ {message}
-          </p>
-        )}
 
         {error && (
           <p className="error-message">
@@ -168,6 +162,37 @@ function Register() {
         </p>
 
       </div>
+
+      {message && (
+        <div className="register-popup-overlay">
+          <div className="register-popup">
+
+            <button
+              type="button"
+              className="register-popup-close"
+              onClick={() => setMessage("")}
+            >
+              ×
+            </button>
+
+            <div className="register-popup-icon">✓</div>
+
+            <h2>Registration Successful!🎉</h2>
+
+            <p>{message}</p>
+
+            <button
+              type="button"
+              className="register-popup-button"
+              onClick={() => setMessage("")}
+            >
+              OKAY
+            </button>
+
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

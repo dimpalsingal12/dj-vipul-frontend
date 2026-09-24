@@ -100,3 +100,87 @@
   margin: 15px 0;
   font-size: 14px;
 }
+
+/* =========================
+   REGISTRATION SUCCESS POPUP
+========================= */
+
+.register-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.register-popup {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 30px;
+  background: #151515;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.register-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.register-popup-close:hover {
+  color: #ffffff;
+}
+
+.register-popup-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.register-popup h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.register-popup p {
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.register-popup-button {
+  padding: 12px 35px;
+  background: #d4af37;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-popup-button:hover {
+  background: #e5c04b;
+}
