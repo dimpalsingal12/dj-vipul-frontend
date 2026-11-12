@@ -1,3 +1,4 @@
+
 .contact {
   display: flex;
   min-height: 620px;
@@ -71,7 +72,8 @@
   border-right: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-.contact-details p {
+.contact-details p,
+.contact-detail-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -83,6 +85,17 @@
   box-sizing: border-box;
   font-size: 17px;
   line-height: 1.5;
+}
+
+.contact-details p {
+  color: white;
+}
+
+.contact-detail-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .contact-details svg {
@@ -140,6 +153,27 @@
   font-size: 25px;
   font-weight: 400;
   line-height: 1;
+}
+
+/* INSTAGRAM LINK HOVER */
+
+.contact-detail-link .contact-info {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-detail-link:hover .contact-info {
+  color: #ffc400;
+}
+
+.contact-detail-link:hover .contact-arrow {
+  transform: translate(3px, -50%);
+  color: white;
+}
+
+.contact-detail-link:focus-visible {
+  outline: 2px solid #ffc400;
+  outline-offset: 4px;
 }
 
 /* =========================
@@ -266,7 +300,8 @@
     padding-right: 25px;
   }
 
-  .contact-details p {
+  .contact-details p,
+  .contact-detail-link {
     gap: 12px;
     font-size: 15px;
   }
@@ -338,7 +373,8 @@
     border-right: none;
   }
 
-  .contact-details p {
+  .contact-details p,
+  .contact-detail-link {
     gap: 13px;
     min-height: 48px;
     margin: 20px 0;
@@ -438,7 +474,8 @@
     font-size: 46px;
   }
 
-  .contact-details p {
+  .contact-details p,
+  .contact-detail-link {
     gap: 10px;
     font-size: 14px;
   }
@@ -452,7 +489,6 @@
     height: 250px;
   }
 }
-
 
 /* =========================
    FINAL CONTACT LAYOUT
@@ -479,6 +515,7 @@
 }
 
 /* Mobile layout */
+
 @media (max-width: 700px) {
   .contact {
     width: 100% !important;

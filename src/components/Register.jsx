@@ -1,8 +1,11 @@
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -56,7 +59,7 @@ function Register() {
 
       if (response.ok) {
         setMessage(
-          "Your account has been created successfully. Check your email and click “Verify Email” to activate your account. If you don't see the email in your inbox, check your Spam folder."
+          "Your account has been created successfully. You can now login using your email and password."
         );
 
         setFormData({
@@ -177,16 +180,16 @@ function Register() {
 
             <div className="register-popup-icon">✓</div>
 
-            <h2>Registration Successful!🎉</h2>
+            <h2>Registration Successful! 🎉</h2>
 
             <p>{message}</p>
 
             <button
               type="button"
               className="register-popup-button"
-              onClick={() => setMessage("")}
+              onClick={() => navigate("/login")}
             >
-              OKAY
+              LOGIN NOW
             </button>
 
           </div>

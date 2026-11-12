@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ReviewsPage.css";
@@ -108,10 +109,10 @@ function ReviewsPage() {
       <div className="reviews-header">
         <p>REVIEWS</p>
 
-        <h1>WHAT OUR CUSTOMERS SAY</h1>
+        <h1>WHAT OUR CLIENTS SAY</h1>
 
         <span>
-          Real experiences from our customers.
+          Real experiences from our clients.
         </span>
       </div>
 

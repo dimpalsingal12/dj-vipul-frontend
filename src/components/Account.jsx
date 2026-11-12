@@ -1,5 +1,7 @@
+
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { customerApi } from "../customerApi";
 import "./Account.css";
 
 function Account() {
@@ -28,17 +30,10 @@ function Account() {
       try {
         setLoadingBookings(true);
 
-        const customerToken = localStorage.getItem("customerToken");
-
-        const response = await fetch(
+        const response = await customerApi(
           `${import.meta.env.VITE_API_URL}/api/bookings/my-bookings/${encodeURIComponent(
             customer.email
-          )}`,
-          {
-            headers: {
-              Authorization: `Bearer ${customerToken}`,
-            },
-          }
+          )}`
         );
 
         const data = await response.json();
@@ -58,12 +53,27 @@ function Account() {
     fetchBookings();
   }, [customer?.email]);
 
-  const handleLogout = () => {
-    localStorage.removeItem("customer");
-    localStorage.removeItem("customerToken");
+  // =========================
+  // LOGOUT
+  // =========================
 
-    navigate("/");
-    window.location.reload();
+  const handleLogout = async () => {
+    try {
+      await customerApi(
+        `${import.meta.env.VITE_API_URL}/api/customers/logout`,
+        {
+          method: "POST",
+        }
+      );
+    } catch (error) {
+      console.error("Logout error:", error);
+    } finally {
+      localStorage.removeItem("customer");
+      localStorage.removeItem("customerToken");
+
+      navigate("/");
+      window.location.reload();
+    }
   };
 
   // =========================
@@ -76,15 +86,12 @@ function Account() {
     try {
       setCancellingBooking(true);
 
-      const customerToken = localStorage.getItem("customerToken");
-
-      const response = await fetch(
+      const response = await customerApi(
         `${import.meta.env.VITE_API_URL}/api/bookings/${selectedBooking._id}/cancel`,
         {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${customerToken}`,
           },
           body: JSON.stringify({
             email: customer.email,
@@ -163,17 +170,14 @@ function Account() {
     try {
       setRemovingBookings(true);
 
-      const customerToken = localStorage.getItem("customerToken");
-
       // Delete each selected booking from MongoDB
       const deleteRequests = selectedBookings.map((bookingId) =>
-        fetch(
+        customerApi(
           `${import.meta.env.VITE_API_URL}/api/bookings/${bookingId}`,
           {
             method: "DELETE",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${customerToken}`,
             },
             body: JSON.stringify({
               email: customer.email,

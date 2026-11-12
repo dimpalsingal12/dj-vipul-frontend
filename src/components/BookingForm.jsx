@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import "./BookingForm.css";
 
@@ -18,6 +19,7 @@ function BookingForm() {
 
   const [message, setMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -29,15 +31,27 @@ function BookingForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setMessage("");
+
     try {
+      const token = localStorage.getItem("customerToken");
+
+      const headers = {
+        "Content-Type": "application/json",
+      };
+
+      if (token && token !== "null" && token !== "undefined") {
+        headers.Authorization = `Bearer ${token}`;
+      }
+
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/bookings`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("customerToken")}`,
-          },
+          headers,
           body: JSON.stringify(formData),
         }
       );
@@ -45,7 +59,7 @@ function BookingForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessage("Booking request sent successfully!");
+        setMessage("Booking request submitted successfully!");
         setShowPopup(true);
 
         setFormData({
@@ -64,6 +78,8 @@ function BookingForm() {
     } catch (error) {
       console.error("Booking error:", error);
       setMessage("Unable to connect to the server.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -118,14 +134,14 @@ function BookingForm() {
         </select>
 
         <input
-  type="date"
-  name="eventDate"
-  min={new Date().toISOString().split("T")[0]}
-  value={formData.eventDate}
-  onChange={handleChange}
-  onClick={(e) => e.currentTarget.showPicker()}
-  required
-/>
+          type="date"
+          name="eventDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formData.eventDate}
+          onChange={handleChange}
+          onClick={(e) => e.currentTarget.showPicker()}
+          required
+        />
 
         <input
           type="text"
@@ -152,8 +168,8 @@ function BookingForm() {
           onChange={handleChange}
         ></textarea>
 
-        <button type="submit">
-          SEND BOOKING REQUEST
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "SENDING..." : "SEND BOOKING REQUEST"}
         </button>
 
       </form>
@@ -171,20 +187,20 @@ function BookingForm() {
 
             <div className="popup-icon">✓</div>
 
-            <h3>Booking Request Sent!</h3>
+            <h3>Booking Submitted Successfully!</h3>
 
             <p>
-              Thank you! Your booking request has been submitted successfully.
+              Thank you for choosing DJ Vipul Professional Sound & Lights.
             </p>
 
             <p>
-              You will receive an email only if DJ Vipul accepts your booking
-              request.
+              Your booking request has been received successfully.
+              Our team will contact you soon to discuss further details.
             </p>
 
             <p className="popup-note">
-              For further process, please contact DJ Vipul directly.
-              Please discuss and confirm all details before proceeding.
+              For pricing, payment, timings and other arrangements,
+              please contact DJ Vipul directly.
             </p>
 
             <button

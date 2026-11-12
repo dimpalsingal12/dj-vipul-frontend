@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import {
   BrowserRouter,
@@ -31,6 +32,8 @@ import ReviewsPage from "./components/ReviewsPage";
 import AdminReviews from "./admin/AdminReviews";
 import ReviewInvite from "./components/ReviewInvite";
 import GalleryManagement from "./admin/GalleryManagement";
+
+// ================= HOME =================
 
 function Home() {
   const location = useLocation();
@@ -68,6 +71,8 @@ function Home() {
   );
 }
 
+// ================= ADMIN PROTECTION =================
+
 function ProtectedAdminRoute({ children }) {
   const adminToken = localStorage.getItem("adminToken");
 
@@ -79,6 +84,8 @@ function ProtectedAdminRoute({ children }) {
   return children;
 }
 
+// ================= APP =================
+
 function App() {
   const location = useLocation();
 
@@ -89,7 +96,6 @@ function App() {
       {!isAdminPage && <Navbar />}
 
       <Routes>
-
         <Route path="/" element={<Home />} />
 
         <Route path="/about" element={<AboutPage />} />
@@ -161,7 +167,6 @@ function App() {
           path="/admin/gallery"
           element={<GalleryManagement />}
         />
-
       </Routes>
 
       {!isAdminPage && location.pathname !== "/account" && (
@@ -170,6 +175,8 @@ function App() {
     </>
   );
 }
+
+// ================= BROWSER ROUTER =================
 
 function AppWrapper() {
   return (

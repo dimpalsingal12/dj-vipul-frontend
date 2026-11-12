@@ -10,11 +10,11 @@ function ReviewInvite() {
       </p>
 
       <h2>
-        See what our customers say.
+        See what our clients say.
       </h2>
 
       <Link to="/reviews" className="review-invite-btn">
-        ★ READ CUSTOMER REVIEWS
+        ★ READ CLIENTS REVIEWS
       </Link>
 
     </section>

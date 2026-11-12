@@ -1,8 +1,8 @@
+
 import {
   FaInstagram,
   FaPhoneAlt,
   FaEnvelope,
-  FaGoogleDrive,
 } from "react-icons/fa";
 
 import "./Contact.css";
@@ -72,16 +72,21 @@ function Contact() {
               <b className="contact-arrow">↗</b>
             </p>
 
-            <p>
-              <FaGoogleDrive />
+            <a
+              className="contact-detail-link"
+              href="https://www.instagram.com/djvipulofficialmumbai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
 
               <span className="contact-info">
-                <small>GOOGLE DRIVE</small>
-                Google Drive Link
+                <small>FOLLOW US ON INSTAGRAM</small>
+                @djvipulofficialmumbai
               </span>
 
               <b className="contact-arrow">↗</b>
-            </p>
+            </a>
 
           </div>
 
